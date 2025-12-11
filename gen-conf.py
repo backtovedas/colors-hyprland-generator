@@ -18,8 +18,8 @@ with open(out, "w") as f:
     f.write(f"$background = {format_color(bg)}\n")
     f.write(f"$foreground = {format_color(fg)}\n")
     for i in range(16):
-        k = str(i)
+        k = f"color{i}"
         if k in colors:
-            f.write(f"$color{i} = {format_color(colors[k])}\n")
+            f.write(f"${k} = {format_color(colors[k])}\n")
 
 print("successfully generated colors-hyprland.conf", out)
