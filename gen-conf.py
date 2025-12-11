@@ -4,7 +4,7 @@ p = os.path.expanduser("~/.cache/wal/colors.json")
 out = os.path.expanduser("~/.cache/wal/colors-hyprland.conf")
 
 def format_color(hex_code):
-    return "ff" + hex_code.lstrip("#")
+    return "0xff" + hex_code.lstrip("#")
 
 with open(p) as f:
     j= json.load(f)
